@@ -1,4 +1,5 @@
 // Ah, yes. The client side. Where most of the processing happens. Including the filtering which is kinda flawed.
+var link = "https://curly-meme-w6964g55p7jcgqjg-8080.app.github.dev/";//"http://localhost:8080" //link
 function filter(text) {
     var list = ["fuck", "shit", "fucking", "shitting", "nigger", "negro", "nigga", "niggers", "niggas", "negroes", "cumming", "cock", "cum", "nutting", "dick", "nazi", "hitler", "adolf", "nut", "pussy"];
     var filteredtext = text;
@@ -30,7 +31,7 @@ async function send() {
     var text = document["getElementById"]("senddata")["value"];
     var resp = "";
     var area = document["getElementById"]("log")
-    await fetch("http://localhost:8080", {method: "POST", body: user+": "+text.toString()})
+    await fetch(link, {method: "POST", body: user+": "+text.toString()})
         .then((response) => response.text())
         .then((txt) => {resp += txt})
     document["getElementById"]("senddata")["value"] = "";
@@ -40,7 +41,7 @@ async function send() {
 async function update() {
     var resp = "";
     var area = document["getElementById"]("log")
-    await fetch("http://localhost:8080", {method: "POST", body: "updateRequestV3"})
+    await fetch(link, {method: "POST", body: "updateRequestV3"})
         .then((response) => response.text())
         .then((txt) => {resp += txt})
     area.value = filter(resp);
