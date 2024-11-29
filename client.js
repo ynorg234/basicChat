@@ -80,4 +80,4 @@ document["body"]["appendChild"](btn);
 document["body"]["appendChild"](document.createElement("br"));
 document["body"]["appendChild"](t);
 update();
-setInterval(update, 500); //Constant updating :)
+setInterval(update, 1000); //Constant updating :)
