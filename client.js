@@ -1,7 +1,7 @@
 // Ah, yes. The client side. Where most of the processing happens. Including the filtering which is kinda flawed.
 var link = "https://curly-meme-w6964g55p7jcgqjg-8080.app.github.dev/";//"http://localhost:8080" //link
 function filter(text) {
-    var list = ["fuck", "shit", "fucking", "shitting", "nigger", "negro", "nigga", "niggers", "niggas", "negroes", "cumming", "cock", "cum", "nutting", "dick", "nazi", "hitler", "adolf", "nut", "pussy"];
+    var list = ["fuck", "shit", "fucking", "shitting", "nigger", "negro", "nigga", "niggers", "niggas", "negroes", "cumming", "cock", "cum", "nutting", "dick", "nazi", "hitler", "adolf", "nut", "pussy", "bitch", "ass", "asshole", "asscheeks"];
     var filteredtext = text;
     var filteredword = "";
     for (item of list) {
