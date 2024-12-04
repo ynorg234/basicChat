@@ -9,6 +9,7 @@ async function retrieve(link) {
     console.log(r);
 return r;
 }
+document.write("<html><body></body></html>");
 var frame = document.createElement("frame");
 frame.setAttribute("id", "f");
 document.body.appendChild(frame)
