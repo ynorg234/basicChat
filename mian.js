@@ -13,7 +13,7 @@ var frame = document.createElement("frame");
 frame.setAttribute("id", "f");
 document.body.appendChild(frame)
 var link = prompt("enter link here (must start with www. or images will be broken): ")
-frame.innerHTML = await retrieve(link)
+frame.innerHTML = retrieve(link)
 var w = frame.contentWindow
 frame.addEventListener('click', e => {
 		if (frameElement && document.activeElement && document.activeElement.href) {
